@@ -1,5 +1,30 @@
 # JConf 2023 - Documenta tu aplicacion Java usando Sphinx
 
+## Sphinx Docker Image with Java Maven support
+
+```
+$cat Dockerfile
+# Sphinx + Java/Maven Support
+FROM sphinxdoc/sphinx
+WORKDIR /docs
+RUN apt-get update && apt-get -y install maven openjdk-17-jdk
+
+$ docker build . -t sphinx-jconf:v1
+
+$ cd ..
+
+$ docker run -it --rm -v ./jconf:/docs sphinx-jconf:v1 make html 
+
+$ docker run -it --rm -v ./jconf:/docs sphinx-jconf:v1 make javadoctest 
+Doctest summary
+===============
+   11 tests
+    0 failures in tests
+    0 failures in setup code
+    0 failures in cleanup code
+build succeeded.
+```
+
 ## Sphinx
 
 This branch contains the changes to default template by adding test code documentation into `index.rst` file
