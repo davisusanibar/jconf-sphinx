@@ -19,3 +19,22 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+Expositores
+-----------
+
+1. Carlos Zela
+2. Victor Mandujano
+3. David Susanibar
+
+Carlos Zela
+^^^^^^^^^^^
+
+- C++
+- Python
+- Java
+
+Redes Sociales
+""""""""""""""
+
+- X
+- Linkedin
