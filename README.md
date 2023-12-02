@@ -2,30 +2,29 @@
 
 ## Sphinx
 
-This branch contains the changes to default template by adding test code documentation into `index.rst` file
+This branch contains the changes to default template by adding ``Java`` test code documentation into `index.rst` file
 ```
-Este es un ejemplo que declara su código a ejecutar usando la directiva ``testcode`` y
-valida la salida del programa con lo que se declara en la directiva ``testoutput``.
+Este es un ejemplo que declara su código a ejecutar usando la directiva ``javatestcode`` y
+valida la salida del programa con lo que se declara en la directiva ``javatestoutput``.
 
-.. testcode::
+.. javatestcode::
 
-   print('JConf Python')
+   System.out.println("JConf Java");
 
-.. testoutput::
+.. javatestoutput::
 
-   JConf Python
+   JConf Java
 ```
 
 ### Creating documentation
 
 ```
-$ make doctest                                                                                              2 ✘  base   at 00:49:33  
-making output directory... done
+$ make javadoctest                                                                                       2 ✘  base   at 00:57:27  
 loading pickled environment... done
 building [mo]: targets for 0 po files that are out of date
 writing output... 
-building [doctest]: targets for 1 source files that are out of date
-updating environment: [extensions changed ('sphinx.ext.doctest')] 1 added, 0 changed, 0 removed
+building [javadoctest]: targets for 1 source files that are out of date
+updating environment: 0 added, 1 changed, 0 removed
 reading sources... [100%] index
 looking for now-outdated files... none found
 pickling environment... done
@@ -48,18 +47,25 @@ Doctest summary
     0 failures in cleanup code
 build succeeded.
 
-Testing of doctests in the sources finished, look at the results in build/doctest/output.txt.
+Java testing of doctests in the sources finished, look at the results in build/javadoctest/output.txt.
 
-$ make html
-Running Sphinx v7.2.6
+$ make html                                                                                                ✔  base   at 00:58:00  
 loading pickled environment... done
 building [mo]: targets for 0 po files that are out of date
 writing output... 
-building [html]: targets for 0 source files that are out of date
+building [html]: targets for 1 source files that are out of date
 updating environment: 0 added, 0 changed, 0 removed
 reading sources... 
 looking for now-outdated files... none found
-no targets are out of date.
+preparing documents... done
+copying assets... copying static files... done
+copying extra files... done
+done
+writing output... [100%] index
+generating indices... genindex done
+writing additional pages... search done
+dumping search index in English (code: en)... done
+dumping object inventory... done
 build succeeded.
 
 The HTML pages are in build/html.

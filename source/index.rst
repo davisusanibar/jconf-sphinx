@@ -35,22 +35,22 @@ Carlos Zela
 
    print('Hi JConf 2023 by Python')
 
-Este es un ejemplo que declara su código a ejecutar usando la directiva ``testcode`` y
-valida la salida del programa con lo que se declara en la directiva ``testoutput``.
-
-.. testcode::
-
-   print('JConf Python')
-
-.. testoutput::
-
-   JConf Python
-
 - Java
 
 .. code-block:: java
 
    System.out.println("Hi JConf 2023 by Java");
+
+Este es un ejemplo que declara su código a ejecutar usando la directiva ``javatestcode`` y
+valida la salida del programa con lo que se declara en la directiva ``javatestoutput``.
+
+.. javatestcode::
+
+   System.out.println("JConf Java");
+
+.. javatestoutput::
+
+   JConf Java
 
 Redes Sociales
 """"""""""""""
