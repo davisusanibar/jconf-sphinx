@@ -29,6 +29,10 @@ javadoctest_config = {
     'path': pathlib.Path(__file__).parent / 'example',
 }
 
+javadoctest_global_setup = '''
+boolean docker = true;
+'''
+
 templates_path = ['_templates']
 exclude_patterns = []
 
