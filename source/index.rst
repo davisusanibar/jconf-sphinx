@@ -57,3 +57,20 @@ Redes Sociales
 
 - X
 - Linkedin
+
+Java Guava Example
+------------------
+
+.. javatestcode::
+
+    import java.util.List;
+    import com.google.common.collect.Lists;
+    import com.google.common.primitives.Ints;
+
+    List<Integer> theList = Ints.asList(1, 2, 3, 4, 5);
+    List<Integer> countDown = Lists.reverse(theList);
+    System.out.println(countDown);
+
+.. javatestoutput::
+
+    [5, 4, 3, 2, 1]

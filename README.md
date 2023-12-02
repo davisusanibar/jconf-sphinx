@@ -2,24 +2,30 @@
 
 ## Sphinx
 
-This branch contains the changes to default template by adding ``Java`` test code documentation into `index.rst` file
+This branch contains the changes to default template by adding ``Java Maven`` test code documentation into `index.rst` file
 ```
-Este es un ejemplo que declara su código a ejecutar usando la directiva ``javatestcode`` y
-valida la salida del programa con lo que se declara en la directiva ``javatestoutput``.
+Java Guava Example
+------------------
 
 .. javatestcode::
 
-   System.out.println("JConf Java");
+    import java.util.List;
+    import com.google.common.collect.Lists;
+    import com.google.common.primitives.Ints;
+
+    List<Integer> theList = Ints.asList(1, 2, 3, 4, 5);
+    List<Integer> countDown = Lists.reverse(theList);
+    System.out.println(countDown);
 
 .. javatestoutput::
 
-   JConf Java
+    [5, 4, 3, 2, 1]
 ```
 
 ### Creating documentation
 
 ```
-$ make javadoctest                                                                                       2 ✘  base   at 00:57:27  
+$ make javadoctest                                                                                          INT ✘  base   at 01:14:36  
 loading pickled environment... done
 building [mo]: targets for 0 po files that are out of date
 writing output... 
@@ -30,6 +36,24 @@ looking for now-outdated files... none found
 pickling environment... done
 checking consistency... done
 running tests...
+
+Document: index
+---------------
+1 items passed all tests:
+   2 tests in default
+2 tests in 1 items.
+2 passed and 0 failed.
+Test passed.
+
+Doctest summary
+===============
+    2 tests
+    0 failures in tests
+    0 failures in setup code
+    0 failures in cleanup code
+build succeeded.
+
+Java testing of doctests in the sources finished, look at the results in build/javadoctest/output.txt.
 
 Document: index
 ---------------
@@ -49,7 +73,7 @@ build succeeded.
 
 Java testing of doctests in the sources finished, look at the results in build/javadoctest/output.txt.
 
-$ make html                                                                                                ✔  base   at 00:58:00  
+$ make html                                                                                              2 ✘  base   at 01:15:09  
 loading pickled environment... done
 building [mo]: targets for 0 po files that are out of date
 writing output... 

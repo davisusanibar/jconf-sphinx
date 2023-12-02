@@ -22,6 +22,13 @@ extensions = [
     'javadoctest',
 ]
 
+import pathlib
+
+javadoctest_config = {
+    'flavor': 'java_with_maven',
+    'path': pathlib.Path(__file__).parent / 'example',
+}
+
 templates_path = ['_templates']
 exclude_patterns = []
 
