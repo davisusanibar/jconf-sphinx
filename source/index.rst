@@ -29,9 +29,17 @@ Expositores
 Carlos Zela
 ^^^^^^^^^^^
 
-- C++
 - Python
+
+.. code-block:: python
+
+   print('Hi JConf 2023 by Python')
+
 - Java
+
+.. code-block:: java
+
+   System.out.println("Hi JConf 2023 by Java");
 
 Redes Sociales
 """"""""""""""

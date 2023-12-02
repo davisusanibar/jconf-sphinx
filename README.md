@@ -2,27 +2,19 @@
 
 ## Sphinx
 
-This branch contains the initial changes to default template by adding documentation into `index.rst` file
+This branch contains the changes to default template by adding code documentation into `index.rst` file
 ```
-Expositores
------------
-
-1. Carlos Zela
-2. Victor Mandujano
-3. David Susanibar
-
-Carlos Zela
-^^^^^^^^^^^
-
-- C++
 - Python
+
+.. code-block:: python
+
+   print('Hi JConf 2023 by Python')
+
 - Java
 
-Redes Sociales
-""""""""""""""
+.. code-block:: java
 
-- X
-- Linkedin
+   System.out.println("Hi JConf 2023 by Java");
 ```
 
 ### Creating documentation
